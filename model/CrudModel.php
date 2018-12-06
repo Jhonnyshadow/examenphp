@@ -3,11 +3,7 @@
 include_once 'Database.php';
 include_once 'Producto.php';
 
-/**
- * Clase para el manejo CRUD de clientes,empleado,buses y pedidos
- *
- * @author T30
- */
+
 class CrudModel {
 
     
