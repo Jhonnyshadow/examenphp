@@ -19,50 +19,28 @@ require_once './model/Producto.php';
                                                         <input type="hidden" name="opcion" value="crear_producto">
                                                         <center><table style=" width: 100%;   border-collapse: collapse;width: 100%;">                                                                                    
                                                                 <tr>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>Identificación producto:</br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br><input type="text" name="idproducto" id="idproducto" maxlength="13"></br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>Tipo Identificación</br></td>
+                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>Codigo</br></td>
+                                                                    <td style="text-align: left;padding: 8px;color: black;"><br><input type="text" name="codigo" id="codigo" maxlength="13"></br></td>
+                                                                    
 </tr>   
                                                                 <tr>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>Nombres:</br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br><input title="Se necesita un nombre" placeholder="Ej: Luis Lomas" pattern="^[a-zA-Z]+[ ][a-zA-Z]+"  type="text" name="nombreproducto" maxlength="100" >  </br></td>                      
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>Fecha Nacimiento:</br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br><input type="date" name="fecnacproducto" required="true" autocomplete="off"  max="today" min="01-01-1800"  value="<?php echo date('d-m-Y'); ?>"></br></td>
+                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>descripción:</br></td>
+                                                                    <td style="text-align: left;padding: 8px;color: black;"><br><input title="Se necesita un nombre" placeholder="Ej: es un celular" type="text" name="descripcion" maxlength="100" >  </br></td>                      
+                                                                    
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>Ciudad Nacimiento:</br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br><input placeholder="Ej: Quito" pattern="^[A-Za-z]+" type="text" name="ciudnacproducto" maxlength="50">                    </br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>Tipo producto:</br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;">
-                                                                        <table>
-                                                                            <tr>
-                                                                                <td><input type="radio" name="tipoproducto" value='true' required="true">Credito</td>
-                                                                                <td width="20"></td>
-                                                                                <td><input type="radio" name="tipoproducto" value='false' required="true">Efectivo</td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </td>
+                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>Cantidad:</br></td>
+                                                                    <td style="text-align: left;padding: 8px;color: black;"><br><input placeholder="Ej: 20"type="text" name="cantidad" maxlength="50">                    </br></td>
+                                                                    
+                                                                      
+                                                                    
                                                                 </tr>
                                                                 <tr>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>Dirección:</br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br><input placeholder="Ej: Quito y Via. Amazonas" pattern="^[0-9A-Za-z- ]+" type="text" name="direccionproducto" maxlength="100" ></br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>Teléfono:</br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br><input placeholder="Ej: 0909785967" pattern="^[0-9]+" type="tel" name="telefonoproducto" maxlength="10" ></br></td>
+                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>Precio:</br></td>
+                                                                    <td style="text-align: left;padding: 8px;color: black;"><br><input placeholder="Ej: 50" type="text" name="precio" maxlength="100" ></br></td>
+                                                                    
                                                                 </tr>
-                                                                <tr>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>Email:</br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br><input type="text" name="emailproducto" maxlength="50" placeholder="Ej: luis@gmail.com" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"  ></br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;"><br>Estado:</br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;">
-                                                                        <table>
-                                                                            <tr>
-                                                                                <td style="text-align: left;padding: 8px;color: black;"><input type="radio" name="estadoproducto" value='true' >Activo</td>
-                                                                                <td width="20"></td>
-                                                                                <td style="text-align: left;padding: 8px;color: black;"><input type="radio" name="estadoproducto" value='false' >Inactivo</td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </td>
-                                                                </tr>
+                                                                
                                                                 <td>
                                                                 <td style="padding: 8px;color: black;" colspan="4"><center><input type="submit" value="Crear" class="btn btn-sm" ></center></td>
                                                                 </td>
