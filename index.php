@@ -50,7 +50,7 @@ require_once './model/Producto.php';
                                                 </div>
                                                  <form action="./controller/controller.php" style=" width: 100%;">
                                                      <input type="hidden" name="opcion" value="listar_productos">
-                                                 <input type="submit" value="listar_productoes"  class="btn btn-sm" >
+                                                 <input type="submit" value="listar_productos"  class="btn btn-sm" >
                                                     </form>
                                                 
                                                 <table  border="1" >   
@@ -75,8 +75,8 @@ require_once './model/Producto.php';
                                                             echo "<td>" . $producto->getCantidad() . "</td>";
                                                             echo "<td>" . $producto->getPrecio() . "</td>";
                                                             
-                                                            echo "<td><center><a title='Eliminar dato' href='./controller/controller.php?opcion=eliminar_producto&idproducto=" . $producto->getIdproducto() . "'>Eliminar</a></center></td>";
-                                                            echo "<td><center><a title='Actualizar dato' href='./controller/controller.php?opcion=editar_producto&idproducto=" . $producto->getIdproducto() . "'>Editar</a></center></td>";
+                                                            echo "<td><center><a title='Eliminar dato' href='./controller/controller.php?opcion=eliminar_producto&idproducto=" . $producto->getCodigo() . "'>Eliminar</a></center></td>";
+                                                            echo "<td><center><a title='Actualizar dato' href='./controller/controller.php?opcion=editar_producto&idproducto=" . $producto->getCodigo() . "'>Editar</a></center></td>";
                                                             echo "</tr>";
                                                         }
                                                     } else {
