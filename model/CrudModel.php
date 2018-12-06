@@ -27,7 +27,7 @@ class CrudModel {
     public function getProductos() {
         //obtenemos la informacion de la bdd:
         $pdo = Database::connect();
-        $sql = "select * from producto order by codigo";
+        $sql = "select * from Productos order by codigo";
         $resultado = $pdo->query($sql);
         //transformamos los registros en objetos:
         $listado = array();
@@ -52,7 +52,7 @@ class CrudModel {
      */
     public function insertarProducto($codigo, $descripcion, $cantidad,$precio) {
         $pdo = Database::connect();
-        $sql = "insert into producto(codigo, descripcion, cantidad,precio) values(?,?,?,?)";
+        $sql = "insert into Productos(Codigo, descripcion, cantidad,precio) values(?,?,?,?)";
         $consulta = $pdo->prepare($sql);
         
         //Ejecutamos y pasamos los parametros:
@@ -73,7 +73,7 @@ class CrudModel {
         //Preparamos la conexion a la bdd:
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "delete from producto where codigo=?";
+        $sql = "delete from Productos where Codigo=?";
         $consulta = $pdo->prepare($sql);
         //Ejecutamos la sentencia incluyendo a los parametros:
         try {
@@ -92,7 +92,7 @@ class CrudModel {
     public function actualizarProducto($codigo, $descripcion, $cantidad,$precio) {
         //Preparamos la conexión a la bdd:
         $pdo = Database::connect();
-        $sql = "update producto set descripcion=?,cantidad=?,precio=? where codigo=?";
+        $sql = "update Productos set descripcion=?,cantidad=?,precio=? where Codigo=?";
         $consulta = $pdo->prepare($sql);
         //Ejecutamos la sentencia incluyendo a los parametros:
         $consulta->execute(array( $descripcion, $cantidad,$precio,$codigo));
@@ -101,7 +101,7 @@ class CrudModel {
 	 public function getProducto($codigo) {
         //obtenemos la informacion de la bdd:
         $pdo = Database::connect();
-        $sql = "select * from producto where codigo=?";
+        $sql = "select * from Productos where Codigo=?";
         $consulta = $pdo->prepare($sql);
         $consulta->execute(array($codigo));
         //obtenemos el registro especifico:
