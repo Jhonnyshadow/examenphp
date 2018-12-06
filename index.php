@@ -78,7 +78,7 @@ require_once './model/Producto.php';
                                                     </form>
                                                 </div>
                                                  <form action="./controller/controller.php" style=" width: 100%;">
-                                                     <input type="hidden" name="opcion" value="listar_productoes">
+                                                     <input type="hidden" name="opcion" value="listar_productos">
                                                  <input type="submit" value="listar_productoes"  class="btn btn-sm" >
                                                     </form>
                                                 
