@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <?php
 session_start();
-require_once './model/producto.php';
+require_once './model/Producto.php';
 
 ?>
     <body>
