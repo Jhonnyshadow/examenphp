@@ -29,7 +29,6 @@ class CrudModel {
         $listado = array();
         foreach ($resultado as $res) {
 		$producto = new Producto($res['codigo'], $res['descripcion'], $res['cantidad'], $res['precio']);
-		echo $producto;
             array_push($listado, $producto);
         }
         Database::disconnect();
