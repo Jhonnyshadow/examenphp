@@ -27,7 +27,7 @@ switch ($opcion) {
         //y los guardamos en sesion:
         $_SESSION['listaProductos'] = serialize($listaProductos);
         //redireccionamos a una nueva pagina para visualizar:
-        header('Location: ../index.php');
+       // header('Location: ../index.php');
         break;
     
     case "crear_producto":
