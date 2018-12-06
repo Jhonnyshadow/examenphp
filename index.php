@@ -22,14 +22,7 @@ require_once './model/Producto.php';
                                                                     <td style="text-align: left;padding: 8px;color: black;"><br>Identificación producto:</br></td>
                                                                     <td style="text-align: left;padding: 8px;color: black;"><br><input type="text" name="idproducto" id="idproducto" maxlength="13"></br></td>
                                                                     <td style="text-align: left;padding: 8px;color: black;"><br>Tipo Identificación</br></td>
-                                                                    <td style="text-align: left;padding: 8px;color: black;">
-                                                                        <select name="tipoidproducto">
-                                                                            <option value="C">CÉDULA</option>
-                                                                            <option value="P">PASAPORTE</option>
-                                                                            <option value="R">RUC</option>
-                                                                        </select>
-                                                                    </td>
-                                                                </tr>
+</tr>   
                                                                 <tr>
                                                                     <td style="text-align: left;padding: 8px;color: black;"><br>Nombres:</br></td>
                                                                     <td style="text-align: left;padding: 8px;color: black;"><br><input title="Se necesita un nombre" placeholder="Ej: Luis Lomas" pattern="^[a-zA-Z]+[ ][a-zA-Z]+"  type="text" name="nombreproducto" maxlength="100" >  </br></td>                      
