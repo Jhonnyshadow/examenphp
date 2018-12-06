@@ -32,7 +32,7 @@ class CrudModel {
         //transformamos los registros en objetos:
         $listado = array();
         foreach ($resultado as $res) {
-		$producto = new Producto($res['Codigo'], $res['descripcion'], $res['cantidad'], $res['precio']);
+		$producto = new Producto($res['codigo'], $res['descripcion'], $res['cantidad'], $res['precio']);
 		echo $producto;
             array_push($listado, $producto);
         }
@@ -53,7 +53,7 @@ class CrudModel {
      */
     public function insertarProducto($codigo, $descripcion, $cantidad,$precio) {
         $pdo = Database::connect();
-        $sql = "insert into productos(Codigo, descripcion, cantidad,precio) values(?,?,?,?)";
+        $sql = "insert into productos(codigo, descripcion, cantidad,precio) values(?,?,?,?)";
         $consulta = $pdo->prepare($sql);
         
         //Ejecutamos y pasamos los parametros:
@@ -74,7 +74,7 @@ class CrudModel {
         //Preparamos la conexion a la bdd:
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "delete from productos where Codigo=?";
+        $sql = "delete from productos where codigo=?";
         $consulta = $pdo->prepare($sql);
         //Ejecutamos la sentencia incluyendo a los parametros:
         try {
@@ -93,7 +93,7 @@ class CrudModel {
     public function actualizarProducto($codigo, $descripcion, $cantidad,$precio) {
         //Preparamos la conexión a la bdd:
         $pdo = Database::connect();
-        $sql = "update productos set descripcion=?,cantidad=?,precio=? where Codigo=?";
+        $sql = "update productos set descripcion=?,cantidad=?,precio=? where codigo=?";
         $consulta = $pdo->prepare($sql);
         //Ejecutamos la sentencia incluyendo a los parametros:
         $consulta->execute(array( $descripcion, $cantidad,$precio,$codigo));
@@ -107,7 +107,7 @@ class CrudModel {
         $consulta->execute(array($codigo));
         //obtenemos el registro especifico:
         $res = $consulta->fetch(PDO::FETCH_ASSOC);
-        $proveedor = new Proveedor($res['Codigo'], $res['descripcion'], $res['cantidad'], $res['precio']);
+        $proveedor = new Proveedor($res['codigo'], $res['descripcion'], $res['cantidad'], $res['precio']);
         Database::disconnect();
         //retornamos el objeto encontrado:
         return $proveedor;
