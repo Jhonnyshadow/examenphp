@@ -27,7 +27,7 @@ class CrudModel {
     public function getProductos() {
         //obtenemos la informacion de la bdd:
         $pdo = Database::connect();
-        $sql = "select * from Productos order by codigo";
+        $sql = "select * from Productos";
         $resultado = $pdo->query($sql);
         //transformamos los registros en objetos:
         $listado = array();
