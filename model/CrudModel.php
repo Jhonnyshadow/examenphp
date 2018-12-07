@@ -102,7 +102,7 @@ class CrudModel {
         $consulta->execute(array($codigo));
         //obtenemos el registro especifico:
         $res = $consulta->fetch(PDO::FETCH_ASSOC);
-        $proveedor = new Proveedor($res['codigo'], $res['descripcion'], $res['cantidad'], $res['precio']);
+        $proveedor = new Producto($res['codigo'], $res['descripcion'], $res['cantidad'], $res['precio']);
         Database::disconnect();
         //retornamos el objeto encontrado:
         return $proveedor;

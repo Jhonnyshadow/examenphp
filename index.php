@@ -84,12 +84,12 @@ and open the template in the editor.
             <br/>
             <br/>
             <div style="text-align:center;">
-                <h3 style="color: #ffffff">Nuevo Producto<span class="badge badge-secondary">New</span></h3>
+                <h3 style="color: #ffffff">Listado de Productos<span class="badge badge-secondary">New</span></h3>
             </div>
 
                
             <div style="position:relative ;right: 0; " class="container">
-                <table class=" table table-borderless"  style="background-color: #ffffcc" border="2" >   
+                <table class=" table table-borderless"  style="background-color: rgba(234,234,122,0.80) " border="2" >   
         <tr class="titulo">
             <th>CODIGO</th>
             <th>DESCRIPCION</th>
@@ -122,10 +122,8 @@ and open the template in the editor.
         </tbody >                    
 
     </table >
-<form action="./controller/controller.php" style=" width: 100%;">
-        <input type="hidden" name="opcion" value="listar_productos">
-        <input type="submit" value="listar_productos"  class="btn btn-sm" >
-    </form>
+    <i class="fas fa-download"></i>
+    <a href='./controller/controller.php?opcion=listar_productos'><button type="submit" value="Crear" class="btn btn-dark" style="font-size: xx-large" ><span  class="fas fa-download"></span> Cargar Listados</button>
                 </div>
         </div>
         
